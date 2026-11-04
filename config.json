@@ -1,0 +1,252 @@
+{
+  "whatsappNumber": "919876543210",
+  "supportEmail": "hello@wedwise.in",
+  "googleClientId": "",
+  "reportDeliveryMode": "whatsapp_or_email",
+  "i18n": {
+    "en": {
+      "tagline": "Prepare for forever.",
+      "navHome": "Home",
+      "navAssessments": "Assessments",
+      "navCourses": "Courses",
+      "navExpert": "Expert Advice",
+      "navFamilies": "For Families",
+      "btnInviteCode": "Partner Code",
+      "btnBookHeader": "Book 1:1 Session",
+      "heroBadge": "India-First Pre-Marital Consultation Platform",
+      "heroTagline": "Prepare for forever.",
+      "heroHeadline": "Build a Stronger Relationship, Together",
+      "heroSubtext": "A complete pre-marital consultation platform to help couples and families build a stronger, more harmonious future together. Guidance, insights and tools for a happy married life.",
+      "ctaStartJourney": "Start Your Journey",
+      "ctaWhatsappHero": "Book on WhatsApp",
+      "pillarsHeading": "Everything You Need Before Saying \"I Do\""
+    },
+    "hi": {
+      "tagline": "हमेशा के साथ के लिए समझदारी से तैयारी।",
+      "navHome": "होम",
+      "navAssessments": "अनुकूलता जाँच",
+      "navCourses": "कोर्स",
+      "navExpert": "विशेषज्ञ परामर्श",
+      "navFamilies": "परिवारों के लिए",
+      "btnInviteCode": "पार्टनर कोड",
+      "btnBookHeader": "1:1 सेशन बुक करें",
+      "heroBadge": "भारत का प्रमुख प्री-मैरिटल परामर्श प्लेटफ़ॉर्म",
+      "heroTagline": "हमेशा के साथ के लिए तैयारी।",
+      "heroHeadline": "एक मजबूत और खुशहाल रिश्ते की नींव रखें",
+      "heroSubtext": "दंपतियों और परिवारों को आपसी समझ, संवाद और विश्वास के साथ विवाह की तैयारी करने में मदद करने वाला संपूर्ण प्लेटफ़ॉर्म।",
+      "ctaStartJourney": "अपनी यात्रा शुरू करें",
+      "ctaWhatsappHero": "WhatsApp पर बुक करें",
+      "pillarsHeading": "विवाह से पहले ज़रूरी हर मार्गदर्शन"
+    }
+  },
+  "whyWedwise": [
+    {
+      "title": "Holistic Preparation",
+      "desc": "Mind, Heart and Future — structured emotional, financial, and practical readiness."
+    },
+    {
+      "title": "Personalized Insights",
+      "desc": "Know what matters — highlight areas of alignment and priorities to discuss together."
+    },
+    {
+      "title": "Expert Support",
+      "desc": "From counselling to courses — psychologists and pre-marital counselors on Google Meet."
+    },
+    {
+      "title": "Designed for Indian Families",
+      "desc": "With cultural sensitivity — balances modern couple autonomy with family warmth."
+    }
+  ],
+  "plans": [
+    {
+      "name": "Free Starter",
+      "subtitle": "Introductory prompts & readiness check",
+      "price": "₹0",
+      "featured": false
+    },
+    {
+      "name": "Self-Paced Courses & Assessments",
+      "subtitle": "40–60 reviewed questions & bilingual modules",
+      "price": "₹499 – ₹1,499",
+      "featured": false
+    },
+    {
+      "name": "1:1 Premarital Strategy Session",
+      "subtitle": "60-Min Private Video Session (Google Meet)",
+      "price": "₹2,999",
+      "badge": "Popular",
+      "featured": true
+    }
+  ],
+  "prompts": [
+    {
+      "category": "Category: Finances & Independence",
+      "en": "“What does financial independence mean to you after marriage, and how should we balance joint goals with personal spending?”",
+      "hi": "\"शादी के बाद आपके लिए आर्थिक स्वतंत्रता का क्या अर्थ है, और हम साझा लक्ष्यों व व्यक्तिगत खर्चों में संतुलन कैसे बनाएंगे?\"",
+      "topicKey": "Finances"
+    },
+    {
+      "category": "Category: Family Expectations & Boundaries",
+      "en": "“How do we envision celebrating festivals, visiting both sets of parents, and making household decisions respectfully?”",
+      "hi": "\"हम त्योहार मनाने, दोनों परिवारों के साथ समय बिताने और आपसी सम्मान के साथ घर के फैसले लेने को कैसे देखते हैं?\"",
+      "topicKey": "Family"
+    },
+    {
+      "category": "Category: Conflict Resolution & Emotional Support",
+      "en": "“When we disagree or feel overwhelmed, do you prefer talking things through immediately or taking quiet time first?”",
+      "hi": "\"जब हमारे बीच असहमति हो या तनाव हो, तो क्या आप तुरंत बात करना पसंद करते हैं या पहले थोड़ा शांत समय लेना?\"",
+      "topicKey": "Communication"
+    },
+    {
+      "category": "Category: Career & Relocation Decisions",
+      "en": "“If one of us receives a major career opportunity in another city, how will we evaluate that transition as a team?”",
+      "hi": "\"यदि हममें से किसी एक को दूसरे शहर में करियर का बड़ा अवसर मिलता है, तो हम एक टीम के रूप में उसका निर्णय कैसे लेंगे?\"",
+      "topicKey": "General"
+    },
+    {
+      "category": "Category: Personal Space & Daily Lifestyle",
+      "en": "“What daily routines, solo hobbies, or friendships are essential for your personal recharge after marriage?”",
+      "hi": "\"शादी के बाद आपकी मानसिक शांति और खुशी के लिए कौन सी दैनिक आदतें, शौक या मित्रताएं ज़रूरी हैं?\"",
+      "topicKey": "Intimacy & Lifestyle"
+    },
+    {
+      "category": "Category: Future Planning & Responsibilities",
+      "en": "“How should we divide everyday household responsibilities so neither partner feels silently overburdened?”",
+      "hi": "\"हमें रोज़मर्रा की घरेलू ज़िम्मेदारियों को कैसे बाँटना चाहिए ताकि किसी भी साथी पर अनकहा बोझ न पड़े?\"",
+      "topicKey": "General"
+    }
+  ],
+  "courses": [
+    {
+      "id": "c1",
+      "type": "couple",
+      "badge": "Couple Track • EN / हिंदी",
+      "title": "Financial Harmony for Indian Couples",
+      "desc": "Joint vs. individual accounts, wedding budgets, investments, family support, and debt transparency.",
+      "lessons": "6 Lessons • 90 Mins",
+      "topic": "Finances"
+    },
+    {
+      "id": "c2",
+      "type": "couple",
+      "badge": "Couple Track • EN / हिंदी",
+      "title": "Healthy Communication & Conflict Repair",
+      "desc": "Active listening, non-defensive expression, emotional triggers, and building psychological safety.",
+      "lessons": "5 Lessons • 75 Mins",
+      "topic": "Communication"
+    },
+    {
+      "id": "c3",
+      "type": "family",
+      "badge": "Family Guidance • EN / हिंदी",
+      "title": "Bridging Two Families with Warmth & Boundaries",
+      "desc": "Navigating cultural traditions, living arrangements, mutual respect, and healthy couple autonomy.",
+      "lessons": "4 Lessons • 60 Mins",
+      "topic": "Family"
+    }
+  ],
+  "experts": [
+    {
+      "name": "Dr. Ananya Sharma",
+      "meta": "9+ Yrs • Family Expectations & Communication (EN/HI)",
+      "topic": "Family"
+    },
+    {
+      "name": "Rohan Mehta, Counseling Psychologist",
+      "meta": "7+ Yrs • Couple Finances, Career & Conflict Resolution",
+      "topic": "Finances"
+    },
+    {
+      "name": "Dr. Meera Nair, Relationship Therapist",
+      "meta": "11+ Yrs • Emotional Intimacy, Values & Lifestyle Alignment",
+      "topic": "Intimacy & Lifestyle"
+    }
+  ],
+  "reviews": [
+    {
+      "quote": "“We were nervous about discussing joint expenses and career relocations before our wedding. One 60-minute session gave us a respectful framework we still use every month.”",
+      "couple": "Aarav & Sneha",
+      "location": "Bengaluru • Engaged"
+    },
+    {
+      "quote": "“Since ours was an arranged match with a 6-month courtship, the WedWise conversation prompts helped us move past small talk into genuine emotional understanding.”",
+      "couple": "Kartik & Pooja",
+      "location": "Delhi NCR • Newly Married"
+    },
+    {
+      "quote": "“Joining on Google Meet from Mumbai and Pune was effortless. Our counselor understood Indian family nuances without ever taking sides.”",
+      "couple": "Rishi & Tanvi",
+      "location": "Mumbai / Pune"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can we join from two different cities?",
+      "a": "Yes! Your private Google Meet invite goes to both partners' emails so you can join from different cities or homes."
+    },
+    {
+      "q": "What if we need to reschedule our slot?",
+      "a": "Simply message us on WhatsApp at least 24 hours before your session, and we will move your calendar invite at no extra cost."
+    },
+    {
+      "q": "Are sessions available in English and Hindi?",
+      "a": "Yes, our counselors conduct sessions in English, Hindi, or a natural bilingual mix based on your comfort."
+    },
+    {
+      "q": "Is our conversation shared with parents or family?",
+      "a": "Never. Your session notes and compatibility reflections remain 100% confidential between you, your partner, and your counselor."
+    }
+  ],
+  "quizQuestions": [
+    {
+      "category": "Finances & Transparency",
+      "topicKey": "Finances",
+      "q": "1. Have you and your partner openly shared your current income, savings style, and financial commitments?",
+      "options": [
+        "Yes, in full detail",
+        "Briefly mentioned, need deeper talk",
+        "Not discussed yet"
+      ]
+    },
+    {
+      "category": "Family Expectations & Boundaries",
+      "topicKey": "Family",
+      "q": "2. Have you aligned on living arrangements (nuclear vs. joint family) and boundaries with extended family?",
+      "options": [
+        "Completely aligned",
+        "Somewhat discussed",
+        "Still figuring out how to bring it up"
+      ]
+    },
+    {
+      "category": "Emotional Support & Conflict",
+      "topicKey": "Communication",
+      "q": "3. Do you know how your partner prefers to receive support during high-stress work or family days?",
+      "options": [
+        "Yes, we understand each other well",
+        "Sometimes we misread signals",
+        "We want tools to communicate better"
+      ]
+    },
+    {
+      "category": "Career & Future Planning",
+      "topicKey": "General",
+      "q": "4. Have you discussed career timelines, relocation possibilities, and family planning expectations?",
+      "options": [
+        "Yes, clear 3–5 year view",
+        "Partially discussed",
+        "Not yet"
+      ]
+    },
+    {
+      "category": "Relationship Preparation Style",
+      "topicKey": "General",
+      "q": "5. How would you prefer to prepare for your marriage over the next 4 weeks?",
+      "options": [
+        "1:1 Confidential Video Session + Guided Prompts",
+        "Self-paced assessments & conversation cards",
+        "Family + Couple combined guidance"
+      ]
+    }
+  ]
+}

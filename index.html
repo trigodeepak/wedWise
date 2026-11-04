@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WedWise — Prepare for Forever | India-First Pre-Marital Consultation Platform</title>
+  <meta name="description" content="A complete pre-marital consultation platform to help Indian couples and families build a stronger, more harmonious future together. Book 1:1 sessions on WhatsApp." />
+  <meta name="theme-color" content="#70265F" />
+  <meta property="og:title" content="WedWise — Prepare for Forever" />
+  <meta property="og:description" content="India-first pre-marital consultation platform for couples and families. Compatibility checks, guided conversations, courses, and 1:1 expert counseling." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3.3 Static CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       MODULE 0: TOP BAR & PAGE SWITCHER
+       ======================================================================== -->
+  <div class="bg-ww-purple py-2 px-3 small">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
+      <div class="d-flex align-items-center gap-2">
+        <span class="rounded-circle d-inline-block" style="width:8px;height:8px;background:#E6A04A;"></span>
+        <span id="topBannerText" class="fw-medium">India-First Pre-Marital Consultation Platform • 100% Confidential Online Video Sessions</span>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <div class="btn-group btn-group-sm rounded-pill p-1" style="background:#561B48;" role="group" aria-label="Page switcher">
+          <button type="button" id="topSwitchHome" class="btn btn-sm rounded-pill fw-semibold px-3 py-1" style="background:#E6A04A;color:#343039;min-height:32px;">
+            Home
+          </button>
+          <button type="button" id="topSwitchCounseling" class="btn btn-sm rounded-pill fw-semibold px-3 py-1 text-white" style="min-height:32px;">
+            Book Counseling
+          </button>
+        </div>
+        <button type="button" id="langToggleBtn" class="btn btn-sm rounded-pill text-white border border-light border-opacity-50 px-3 py-1 fw-semibold" style="min-height:32px;" aria-label="Toggle English or Hindi language">
+          EN / हिंदी
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODULE 1: STICKY BRAND NAVBAR
+       ======================================================================== -->
+  <header class="ww-navbar py-2">
+    <div class="container d-flex align-items-center justify-content-between gap-3">
+      <button type="button" id="brandLogoBtn" class="btn p-0 border-0 d-flex align-items-center gap-2 text-start" aria-label="WedWise Home">
+        <div class="ww-icon-box" style="width:52px;height:44px;background:#FFF9F2;">
+          <svg width="42" height="28" viewBox="0 0 88 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M44 13C41.8 9.2 37.2 8 34.2 11.2C31.5 14 33.2 18.2 44 24.5C54.8 18.2 56.5 14 53.8 11.2C50.8 8 46.2 9.2 44 13Z" fill="#70265F"/>
+            <path d="M24 23C14.5 23 8 29 8 36.5C8 44 14.5 50 24 50C31.5 50 37 44.5 44 36.5C37 28.5 31.5 23 24 23Z" stroke="#70265F" stroke-width="6.5" stroke-linecap="round"/>
+            <path d="M44 36.5C51 44.5 56.5 50 64 50C68.5 50 72.5 48 75 45" stroke="#70265F" stroke-width="6" stroke-linecap="round"/>
+            <path d="M24 48.5C32.5 48.5 38.5 42 46 33.5C53.5 25 58 23 64 23C73.5 23 80 29 80 36.5C80 43.2 74.5 48.2 66.5 48.2" stroke="#E6A04A" stroke-width="6" stroke-linecap="round"/>
+            <path d="M27 53C35 53 41 46.5 48.5 38" stroke="#E6A04A" stroke-width="3.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="ps-2" style="border-left: 1.5px solid #B17A9E;">
+          <span class="font-serif-brand fs-4 fw-bold text-ww-purple position-relative d-inline-block lh-1">WedWise<svg width="8" height="8" viewBox="0 0 16 16" fill="#E6A04A" style="position:absolute;top:0px;left:71%;transform:translateX(-50%);background:#FFF9F2;border-radius:50%;" aria-hidden="true"><path d="M8 3.2C6.8 1.4 4.2 1 2.6 2.8C1.1 4.5 2 7 8 11.2C14 7 14.9 4.5 13.4 2.8C11.8 1 9.2 1.4 8 3.2Z"/></svg></span>
+          <span class="font-serif-brand fst-italic small text-ww-purple d-block" style="font-size:0.72rem;" data-i18n="tagline">Prepare for forever.</span>
+        </div>
+      </button>
+
+      <nav class="d-none d-lg-flex align-items-center gap-2" aria-label="Main navigation">
+        <button type="button" data-nav-target="home" class="btn btn-link text-decoration-none text-ww-purple fw-semibold px-3" data-i18n="navHome">Home</button>
+        <button type="button" data-scroll-to="pillarsSection" class="btn btn-link text-decoration-none text-dark fw-medium px-3" data-i18n="navAssessments">Assessments</button>
+        <button type="button" data-scroll-to="coursesSection" class="btn btn-link text-decoration-none text-dark fw-medium px-3" data-i18n="navCourses">Courses</button>
+        <button type="button" data-nav-target="counseling" class="btn btn-link text-decoration-none text-dark fw-medium px-3 d-inline-flex align-items-center gap-1">
+          <span data-i18n="navExpert">Expert Advice</span>
+          <span class="badge rounded-pill bg-ww-blush text-ww-purple border">1:1 Video</span>
+        </button>
+        <button type="button" data-scroll-to="whySection" class="btn btn-link text-decoration-none text-dark fw-medium px-3" data-i18n="navFamilies">For Families</button>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" id="partnerCodeModalBtn" class="btn-ww-soft d-none d-sm-inline-flex align-items-center gap-1 rounded-pill px-3">
+          <span aria-hidden="true">🔗</span>
+          <span data-i18n="btnInviteCode">Partner Code</span>
+        </button>
+        <button type="button" id="headerBookBtn" class="btn-ww-primary small">
+          <span data-i18n="btnBookHeader">Book 1:1 Session</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       PAGE 1: HOME VIEW
+       ======================================================================== -->
+  <main id="pageHome">
+
+    <!-- ==================== SECTION 1.1: HERO BANNER ==================== -->
+    <section id="heroSection" class="ww-hero-gradient py-5 border-bottom border-ww-gold">
+      <div class="container py-lg-2">
+        <div class="row g-5 align-items-center">
+
+          <div class="col-12 col-lg-6 text-center text-lg-start">
+            <div class="ww-badge mb-3">
+              <span aria-hidden="true">✨</span>
+              <span data-i18n="heroBadge">India-First Pre-Marital Consultation Platform</span>
+            </div>
+
+            <div class="mb-3 d-flex justify-content-center justify-content-lg-start">
+              <img
+                src="assets/wedwise_logo_horizontal.jpg"
+                alt="WedWise — Prepare for forever horizontal logo"
+                width="380"
+                height="86"
+                class="img-fluid rounded-3 border border-ww-gold shadow-sm"
+                style="max-height: 86px; width: auto;"
+              />
+            </div>
+
+            <h1 class="font-serif-brand display-6 fw-bold mb-3" data-i18n="heroHeadline">
+              Build a Stronger Relationship, Together
+            </h1>
+
+            <p class="lead fs-6 text-secondary mb-4 mx-auto mx-lg-0" style="max-width: 560px;" data-i18n="heroSubtext">
+              A complete pre-marital consultation platform to help couples and families build a stronger, more harmonious future together. Guidance, insights and tools for a happy married life.
+            </p>
+
+            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center justify-content-center justify-content-lg-start gap-3 mb-4">
+              <button type="button" id="heroStartJourneyBtn" class="btn-ww-primary">
+                <span data-i18n="ctaStartJourney">Start Your Journey</span>
+                <span aria-hidden="true">→</span>
+              </button>
+              <a id="heroWhatsappDirectLink" href="https://wa.me/919876543210?text=Hi!%20I'd%20like%20to%20book%20a%20Premarital%20Counseling%20session.%20Topic:%20General%20Readiness%20Preferred%20time:%20Weekend" target="_blank" rel="noopener noreferrer" class="btn-ww-outline text-decoration-none">
+                <svg width="20" height="20" style="color:#1B873F;" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+                <span data-i18n="ctaWhatsappHero">Book on WhatsApp</span>
+              </a>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 small text-secondary">
+              <span><strong class="text-ww-purple">✓</strong> Understand • Connect • Grow</span>
+              <span><strong class="text-ww-purple">✓</strong> 100% Private &amp; Non-Judgmental</span>
+              <span><strong class="text-ww-purple">✓</strong> English &amp; हिंदी</span>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="rounded-4 overflow-hidden border border-2 border-ww-gold shadow position-relative bg-ww-blush">
+              <img
+                src="assets/wedwise_couple.jpg"
+                alt="Happy Indian couple preparing for marriage with WedWise"
+                width="640"
+                height="264"
+                fetchpriority="high"
+                decoding="async"
+                class="w-100 object-fit-cover"
+                style="height: 230px;"
+              />
+              <div class="p-2 px-3 bg-ww-purple text-white small d-flex align-items-center justify-content-between">
+                <span>✨ Because a lasting marriage begins with understanding.</span>
+                <span class="badge bg-light text-dark d-none d-sm-inline-block">Online Video</span>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1 px-2">
+              <div class="col-5">
+                <div class="device-phone p-3 text-center h-100 d-flex flex-column justify-content-between">
+                  <div class="d-flex justify-content-between text-secondary" style="font-size:0.68rem;">
+                    <span>9:41</span>
+                    <span>5G</span>
+                  </div>
+                  <div class="my-2">
+                    <div class="font-serif-brand fw-bold text-ww-purple">WedWise</div>
+                    <div class="font-serif-brand fst-italic text-ww-gold" style="font-size:0.7rem;">Prepare for forever.</div>
+                    <div class="badge bg-ww-blush text-ww-purple w-100 mt-2 py-2 text-wrap" style="font-size:0.65rem;">
+                      Understand • Connect • Grow
+                    </div>
+                  </div>
+                  <button type="button" id="phoneMockupBtn" class="btn btn-sm rounded-pill bg-ww-purple text-white fw-semibold w-100 py-2" style="min-height:40px;font-size:0.75rem;">
+                    Get Started →
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-7">
+                <div class="device-laptop p-3 h-100 d-flex flex-column justify-content-between">
+                  <div class="d-flex align-items-center justify-content-between border-bottom pb-2">
+                    <span class="font-serif-brand fw-bold small text-ww-purple">∞ WedWise</span>
+                    <span class="badge rounded-pill bg-ww-blush text-ww-purple" style="font-size:0.68rem;">Courses • Expert</span>
+                  </div>
+                  <div class="my-2">
+                    <div class="font-serif-brand fw-bold small">Build a Stronger Relationship, Together</div>
+                    <p class="text-secondary mb-0 mt-1" style="font-size:0.75rem;">Guidance, insights and tools for a happy married life.</p>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between pt-1">
+                    <button type="button" id="laptopMockupBtn" class="btn btn-sm rounded-pill bg-ww-purple text-white fw-semibold px-3 py-2" style="min-height:40px;font-size:0.75rem;">
+                      Start Journey →
+                    </button>
+                    <span class="small fw-semibold text-ww-gold d-none d-sm-inline" style="font-size:0.72rem;">₹2,999</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 1.2: 4 CORE PILLARS ==================== -->
+    <section id="pillarsSection" class="py-5">
+      <div class="container py-2">
+        <div class="text-center mx-auto mb-5" style="max-width: 680px;">
+          <span class="text-uppercase fw-bold small text-ww-gold" style="letter-spacing: 0.08em;">How WedWise Helps You Prepare</span>
+          <h2 class="font-serif-brand display-6 fw-bold text-ww-purple mt-1" data-i18n="pillarsHeading">
+            Everything You Need Before Saying "I Do"
+          </h2>
+          <p class="text-secondary mb-0">
+            Explore our guided tools together at your own pace or book a private 1:1 consultation with a relationship expert.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ww-card p-4 h-100 d-flex flex-column justify-content-between text-center">
+              <div>
+                <div class="ww-icon-box mx-auto mb-3">
+                  <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                  </svg>
+                </div>
+                <h3 class="font-serif-brand h5 fw-bold mb-1">Compatibility Assessment</h3>
+                <p class="small fw-semibold text-ww-purple mb-2">Know how well you align</p>
+                <p class="small text-secondary mb-4">
+                  Answer 5 foundational questions and get your personalized Couple Alignment Report delivered on WhatsApp or Email.
+                </p>
+              </div>
+              <button type="button" id="openQuizBtn" class="btn-ww-soft w-100 small">
+                Try 5-Question Check →
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ww-card p-4 h-100 d-flex flex-column justify-content-between text-center">
+              <div>
+                <div class="ww-icon-box mx-auto mb-3">
+                  <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                  </svg>
+                </div>
+                <h3 class="font-serif-brand h5 fw-bold mb-1">Couple Conversations</h3>
+                <p class="small fw-semibold text-ww-purple mb-2">Talk. Understand. Grow.</p>
+                <p class="small text-secondary mb-4">
+                  Guided pre-marital prompts on financial independence, personal space, emotional support, and conflict resolution.
+                </p>
+              </div>
+              <button type="button" id="openPromptsBtn" class="btn-ww-soft w-100 small">
+                Explore Prompt Deck →
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ww-card p-4 h-100 d-flex flex-column justify-content-between text-center">
+              <div>
+                <div class="ww-icon-box mx-auto mb-3">
+                  <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                  </svg>
+                </div>
+                <h3 class="font-serif-brand h5 fw-bold mb-1">Pre-Marital Courses</h3>
+                <p class="small fw-semibold text-ww-purple mb-2">Learn for a stronger tomorrow</p>
+                <p class="small text-secondary mb-4">
+                  Self-paced bilingual modules (English &amp; Hindi) on emotional intelligence, couple budgeting, and family dynamics.
+                </p>
+              </div>
+              <button type="button" data-scroll-to="coursesSection" class="btn-ww-soft w-100 small">
+                Browse Curriculum →
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ww-card p-4 h-100 d-flex flex-column justify-content-between text-center border-2" style="border-color: rgba(112,38,95,0.4);">
+              <div>
+                <div class="ww-icon-box mx-auto mb-3 bg-ww-purple text-white">
+                  <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                  </svg>
+                </div>
+                <h3 class="font-serif-brand h5 fw-bold mb-1">Expert Guidance</h3>
+                <p class="small fw-semibold text-ww-purple mb-2">Get advice from relationship experts</p>
+                <p class="small text-secondary mb-4">
+                  Book a confidential 60-minute video strategy session with verified Indian relationship counselors via Google Meet.
+                </p>
+              </div>
+              <button type="button" id="pillarExpertBookBtn" class="btn-ww-primary w-100 small">
+                Book Session (₹2,999) →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 1.3: INTERACTIVE CONVERSATIONS & READINESS ==================== -->
+    <section id="interactivePreviewSection" class="py-5 bg-ww-blush border-top border-bottom border-ww-gold">
+      <div class="container py-2">
+        <div class="row g-4 align-items-stretch">
+
+          <div class="col-12 col-lg-6">
+            <div class="ww-card p-4 p-sm-5 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
+                  <span class="ww-badge">💬 Couple Conversations Preview</span>
+                  <span id="promptCounter" class="small fw-semibold text-ww-gold">Prompt 1 of 6</span>
+                </div>
+                <h2 class="font-serif-brand h3 fw-bold mb-2">Meaningful Questions Before the Vows</h2>
+                <p class="small text-secondary mb-4">
+                  Each partner reflects separately before revealing shared answers—ensuring honest, pressure-free conversations.
+                </p>
+
+                <div class="p-4 rounded-4 bg-ww-ivory border border-ww-gold mb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-2">
+                    <span id="promptCategoryBadge" class="small fw-bold text-uppercase text-ww-purple">Category: Finances &amp; Independence</span>
+                    <span class="small text-secondary">🔒 Private Sharing</span>
+                  </div>
+                  <p id="promptQuestionText" class="font-serif-brand fs-5 fw-bold mb-2">
+                    “What does financial independence mean to you after marriage, and how should we balance joint goals with personal spending?”
+                  </p>
+                  <p id="promptQuestionHindi" class="small fst-italic text-ww-purple mb-0">
+                    "शादी के बाद आपके लिए आर्थिक स्वतंत्रता का क्या अर्थ है, और हम साझा लक्ष्यों व व्यक्तिगत खर्चों में संतुलन कैसे बनाएंगे?"
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+                <div class="d-flex gap-2">
+                  <button type="button" id="prevPromptBtn" class="btn-ww-soft px-3 small">← Previous</button>
+                  <button type="button" id="nextPromptBtn" class="btn-ww-primary px-4 small">Next Question →</button>
+                </div>
+                <button type="button" id="sharePromptWhatsappBtn" class="btn btn-link text-ww-purple fw-semibold small text-decoration-none p-2">
+                  Share Question with Partner ↗
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="ww-card p-4 p-sm-5 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
+                  <span class="ww-badge">📊 Readiness &amp; Alignment Check</span>
+                  <span class="small fw-semibold text-success">Non-Judgmental Insights</span>
+                </div>
+                <h2 class="font-serif-brand h3 fw-bold mb-2">Quick Self-Reflection Check</h2>
+                <p class="small text-secondary mb-4">
+                  Rate how openly you and your partner have discussed these three foundational areas so far:
+                </p>
+
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between small fw-semibold mb-1">
+                    <label for="sliderFin">1. Finances, Debt &amp; Savings Goals</label>
+                    <span id="scoreFinVal" class="text-ww-purple">70% Discussed</span>
+                  </div>
+                  <input type="range" id="sliderFin" min="10" max="100" step="10" value="70" class="form-range" />
+                </div>
+
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between small fw-semibold mb-1">
+                    <label for="sliderFam">2. In-Laws, Living Arrangements &amp; Boundaries</label>
+                    <span id="scoreFamVal" class="text-ww-purple">50% Discussed</span>
+                  </div>
+                  <input type="range" id="sliderFam" min="10" max="100" step="10" value="50" class="form-range" />
+                </div>
+
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between small fw-semibold mb-1">
+                    <label for="sliderLife">3. Career Moves, Children &amp; Lifestyle Roles</label>
+                    <span id="scoreLifeVal" class="text-ww-purple">80% Discussed</span>
+                  </div>
+                  <input type="range" id="sliderLife" min="10" max="100" step="10" value="80" class="form-range" />
+                </div>
+              </div>
+
+              <div class="p-3 rounded-4 bg-ww-ivory border border-ww-gold d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+                <div>
+                  <div class="small fw-bold text-ww-purple" id="readinessSummaryTitle">Alignment Readiness: 67% — Good Foundation</div>
+                  <div class="small text-secondary" id="readinessSummaryDesc">Recommended focus: Family Expectations &amp; Boundaries.</div>
+                </div>
+                <button type="button" id="bookRecommendedTopicBtn" class="btn-ww-primary small py-2 px-3 shrink-0">
+                  Book This Topic →
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 1.4: WHY WEDWISE & PLANS (Populated from JSON Config) ==================== -->
+    <section id="whySection" class="py-5">
+      <div class="container py-2">
+        <div class="row g-5 align-items-center">
+
+          <div class="col-12 col-lg-7">
+            <span class="text-uppercase fw-bold small text-ww-gold" style="letter-spacing: 0.08em;">Designed for Indian Couples &amp; Families</span>
+            <h2 class="font-serif-brand display-6 fw-bold text-ww-purple mt-1 mb-4">Why WedWise?</h2>
+
+            <div id="whyPointsContainer" class="row g-3 mb-4">
+              <!-- Populated from WEDWISE_CONFIG.whyWedwise -->
+            </div>
+
+            <div class="p-4 rounded-4 bg-ww-blush border border-ww-gold text-center">
+              <p class="font-serif-brand fst-italic fs-4 text-ww-purple mb-1">
+                “Because a lasting marriage begins with understanding.”
+              </p>
+              <span class="text-ww-purple" aria-hidden="true">♡</span>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5">
+            <div class="ww-card p-4 p-sm-5">
+              <div class="d-flex align-items-center justify-content-between mb-4">
+                <h3 class="font-serif-brand h4 fw-bold mb-0">Simple, Transparent Plans</h3>
+                <span class="ww-badge">INR (₹) • IST</span>
+              </div>
+
+              <div id="plansContainer" class="d-flex flex-column gap-3 mb-4">
+                <!-- Populated from WEDWISE_CONFIG.plans -->
+              </div>
+
+              <div class="pt-3 border-top border-ww-gold small text-secondary">
+                <strong class="text-ww-purple d-block mb-1">🔒 Our Privacy &amp; Consent Promise</strong>
+                Every personal assessment answer is private by default. Nothing is shared with your partner or family without your explicit consent.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 1.5: COURSES & FAMILY MODULES ==================== -->
+    <section id="coursesSection" class="py-5 bg-ww-blush border-top border-ww-gold">
+      <div class="container py-2">
+        <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-4 gap-3">
+          <div>
+            <span class="text-uppercase fw-bold small text-ww-gold" style="letter-spacing: 0.08em;">Structured Learning</span>
+            <h2 class="font-serif-brand display-6 fw-bold text-ww-purple mt-1 mb-0">
+              Pre-Marital Courses &amp; Family Modules
+            </h2>
+          </div>
+          <div class="d-flex flex-wrap gap-2" role="group" aria-label="Course filters">
+            <button type="button" data-course-filter="all" class="course-filter-btn btn-ww-soft active rounded-pill px-3 small">All Tracks</button>
+            <button type="button" data-course-filter="couple" class="course-filter-btn btn-ww-soft rounded-pill px-3 small">For Couples</button>
+            <button type="button" data-course-filter="family" class="course-filter-btn btn-ww-soft rounded-pill px-3 small">For Families</button>
+          </div>
+        </div>
+
+        <div id="coursesGrid" class="row g-4">
+          <!-- Populated from WEDWISE_CONFIG.courses -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       PAGE 2: BOOK COUNSELING VIEW
+       ======================================================================== -->
+  <main id="pageCounseling" class="d-none">
+
+    <!-- ==================== SECTION 2.1: BOOKING CUSTOMIZER & EXPERTS ==================== -->
+    <section id="bookingFormSection" class="ww-hero-gradient py-5 border-bottom border-ww-gold">
+      <div class="container">
+        <div class="mb-4">
+          <button type="button" id="backToHomeBtn" class="btn btn-link text-ww-purple fw-semibold text-decoration-none p-0">
+            ← Back to Home
+          </button>
+        </div>
+
+        <div class="row g-4 align-items-start">
+
+          <div class="col-12 col-lg-7">
+            <div class="ww-card p-4 p-sm-5">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                <span class="ww-badge">✨ Confidential Online Consultation</span>
+                <span class="badge rounded-pill bg-ww-ivory text-ww-purple border border-ww-gold px-3 py-2">60-Min Session • ₹2,999</span>
+              </div>
+
+              <h1 class="font-serif-brand h2 fw-bold mb-2">Book Your Premarital Strategy Session</h1>
+              <p class="small text-secondary mb-4">
+                Select your key discussion topic and preferred time window below. Our care team will share 2 convenient IST slots on WhatsApp and set up your private Google Meet session.
+              </p>
+
+              <div class="row g-3 mb-4">
+                <div class="col-12 col-sm-6">
+                  <label for="waTopicSelect" class="form-label small fw-semibold">1. Key Discussion Topic</label>
+                  <select id="waTopicSelect" class="form-select bg-ww-ivory border-ww-gold">
+                    <option value="General">General Readiness &amp; Compatibility</option>
+                    <option value="Finances">Finances, Budgeting &amp; Career Goals</option>
+                    <option value="Family">Family Expectations &amp; Healthy Boundaries</option>
+                    <option value="Communication">Communication &amp; Conflict Resolution</option>
+                    <option value="Intimacy &amp; Lifestyle">Intimacy, Values &amp; Lifestyle Alignment</option>
+                  </select>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                  <label for="waTimeSelect" class="form-label small fw-semibold">2. Preferred Time Window (IST)</label>
+                  <select id="waTimeSelect" class="form-select bg-ww-ivory border-ww-gold">
+                    <option value="Weekend">Weekend (Saturday / Sunday IST)</option>
+                    <option value="Evening">Weekday Evening (6:00 PM – 9:00 PM IST)</option>
+                    <option value="Morning">Morning Slot (10:00 AM – 1:00 PM IST)</option>
+                  </select>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                  <label for="waWeddingDate" class="form-label small fw-semibold">3. Wedding Month / Stage (Optional)</label>
+                  <input type="text" id="waWeddingDate" placeholder="e.g., Dec 2026 / Engaged" class="form-control bg-ww-ivory border-ww-gold" />
+                </div>
+
+                <div class="col-12 col-sm-6">
+                  <label for="waParticipantSelect" class="form-label small fw-semibold">4. Who Will Join?</label>
+                  <select id="waParticipantSelect" class="form-select bg-ww-ivory border-ww-gold">
+                    <option value="Both Partners">Both Partners Together</option>
+                    <option value="Individual">Individual Clarity Session First</option>
+                    <option value="Couple & Family">Couple + Family Guidance</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-4 bg-ww-ivory border border-ww-gold mb-4">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <span class="small fw-bold text-uppercase text-ww-purple" style="font-size:0.72rem;">Your Pre-Filled WhatsApp Request</span>
+                  <span class="small text-success fw-semibold" style="font-size:0.72rem;">✓ Instant Concierge Reply</span>
+                </div>
+                <p id="waMessagePreview" class="small fst-italic mb-0 p-2 rounded bg-ww-blush"></p>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row gap-3">
+                <a id="dynamicWaButton" href="https://wa.me/919876543210?text=Hi!" target="_blank" rel="noopener noreferrer" class="btn-ww-whatsapp flex-grow-1">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+                  <span>Book Premarital Counseling on WhatsApp</span>
+                </a>
+                <button type="button" id="copyWaUrlBtn" class="btn-ww-soft rounded-pill px-4 small">
+                  Copy Message Text
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5 d-flex flex-column gap-4">
+            <div class="ww-card p-4">
+              <h2 class="font-serif-brand h4 fw-bold text-ww-purple mb-3">How Your 60-Minute Session Works</h2>
+              <ol class="list-unstyled d-flex flex-column gap-3 mb-0 small">
+                <li class="d-flex align-items-start gap-3">
+                  <span class="badge rounded-circle bg-ww-blush text-ww-purple border p-2">1</span>
+                  <div>
+                    <div class="fw-bold">Message Us on WhatsApp</div>
+                    <div class="text-secondary">Share your preferred topic and whether weekends or weekday evenings suit you best.</div>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <span class="badge rounded-circle bg-ww-blush text-ww-purple border p-2">2</span>
+                  <div>
+                    <div class="fw-bold">Pick from 2 Open IST Slots</div>
+                    <div class="text-secondary">Our care team checks counselor availability and proposes 2 convenient time slots in chat.</div>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <span class="badge rounded-circle bg-ww-blush text-ww-purple border p-2">3</span>
+                  <div>
+                    <div class="fw-bold">Simple Session Confirmation (₹2,999)</div>
+                    <div class="text-secondary">Confirm your slot using a secure payment link shared in WhatsApp with instant receipt.</div>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <span class="badge rounded-circle bg-ww-purple text-white p-2">4</span>
+                  <div>
+                    <div class="fw-bold">Join Your Private Google Meet</div>
+                    <div class="text-secondary">Receive your Google Calendar invite and confidential video link for both partners.</div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="ww-card p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <h3 class="font-serif-brand h5 fw-bold mb-0">Meet Our Relationship Experts</h3>
+                <span class="small fw-semibold text-success">✓ Verified M.Phil / MA</span>
+              </div>
+              <div id="expertsListContainer" class="d-flex flex-column gap-2">
+                <button type="button" data-select-topic="Family" class="quick-topic-btn btn-ww-soft py-1 px-3 small">Book</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2.2: REVIEWS & FAQs (Populated from JSON Config) ==================== -->
+    <section id="testimonialsFaqSection" class="py-5">
+      <div class="container">
+        <div class="text-center mx-auto mb-4" style="max-width:600px;">
+          <span class="text-uppercase fw-bold small text-ww-gold" style="letter-spacing: 0.08em;">Couple Reflections</span>
+          <h2 class="font-serif-brand h2 fw-bold text-ww-purple mt-1">How Couples Prepared with WedWise</h2>
+        </div>
+
+        <div id="reviewsGridContainer" class="row g-4 mb-5">
+          <!-- Populated dynamically from WEDWISE_CONFIG.reviews -->
+        </div>
+
+        <div class="ww-card p-4 p-sm-5 mx-auto" style="max-width: 880px;">
+          <h3 class="font-serif-brand h3 fw-bold text-ww-purple text-center mb-4">Frequently Asked Questions</h3>
+          <div id="faqsGridContainer" class="row g-3 small">
+            <!-- Populated dynamically from WEDWISE_CONFIG.faqs -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       MODULE 2: FOOTER
+       ======================================================================== -->
+  <footer class="py-5 text-white" style="background-color: #343039;">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="font-serif-brand fs-3 fw-bold" style="color:#E6A04A;">WedWise</span>
+            <span class="font-serif-brand fst-italic small opacity-75">— Prepare for forever.</span>
+          </div>
+          <p class="small opacity-75 mb-2" style="max-width: 420px;">
+            India-first pre-marital consultation platform helping couples and families prepare for marriage with greater understanding, communication, and confidence.
+          </p>
+          <div class="small" style="color:#E6A04A;">
+            🔒 Privacy-First: Assessment responses remain private by default and require explicit partner consent.
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 small">
+          <div class="fw-bold text-uppercase mb-2" style="color:#E6A04A;">Explore WedWise</div>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><button type="button" data-nav-target="home" class="btn btn-link p-0 text-white text-decoration-none opacity-75 small">Home &amp; Core Modules</button></li>
+            <li><button type="button" data-nav-target="counseling" class="btn btn-link p-0 text-white text-decoration-none opacity-75 small">Book 1:1 Expert Counseling</button></li>
+            <li><button type="button" id="footerQuizBtn" class="btn btn-link p-0 text-white text-decoration-none opacity-75 small">Interactive Compatibility Check</button></li>
+            <li><button type="button" id="footerInviteBtn" class="btn btn-link p-0 text-white text-decoration-none opacity-75 small">Partner Invitation Code</button></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 small">
+          <div class="fw-bold text-uppercase mb-2" style="color:#E6A04A;">Book a Session</div>
+          <p class="opacity-75 mb-2">60-Min Premarital Strategy Session • ₹2,999 (Google Meet)</p>
+          <a href="https://wa.me/919876543210?text=Hi!%20I'd%20like%20to%20book%20a%20Premarital%20Counseling%20session.%20Topic:%20General%20Preferred%20time:%20Weekend" target="_blank" rel="noopener noreferrer" class="btn-ww-whatsapp py-2 px-3 small">
+            <span>Chat on WhatsApp ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-3 border-top border-secondary d-flex flex-column flex-sm-row align-items-center justify-content-between small opacity-75 gap-2">
+        <span>© 2026 WedWise. All rights reserved.</span>
+        <span>“Because a lasting marriage begins with understanding.” ♡</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODULE 3: MOBILE BOTTOM NAVIGATION BAR
+       ======================================================================== -->
+  <nav class="ww-bottom-nav d-md-none d-flex align-items-center justify-content-around" aria-label="Mobile navigation">
+    <button type="button" data-nav-target="home" class="ww-bottom-btn active">
+      <span aria-hidden="true">🏠</span>
+      <span>Home</span>
+    </button>
+    <button type="button" id="mobileAssessBtn" class="ww-bottom-btn">
+      <span aria-hidden="true">📋</span>
+      <span>Assess</span>
+    </button>
+    <button type="button" id="mobileConnectBtn" class="ww-bottom-btn">
+      <span aria-hidden="true">💬</span>
+      <span>Connect</span>
+    </button>
+    <button type="button" data-scroll-to="coursesSection" class="ww-bottom-btn">
+      <span aria-hidden="true">📖</span>
+      <span>Learn</span>
+    </button>
+    <button type="button" data-nav-target="counseling" class="ww-bottom-btn">
+      <span aria-hidden="true">👩‍⚕️</span>
+      <span>Expert</span>
+    </button>
+  </nav>
+
+  <!-- ========================================================================
+       MODULE 4: COMPATIBILITY CHECKER MODAL (With WhatsApp / Email Report Delivery Gate)
+       ======================================================================== -->
+  <div id="quizModal" class="ww-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="quizModalTitle">
+    <div class="ww-modal-dialog">
+      <div class="d-flex align-items-center justify-content-between border-bottom border-ww-gold pb-3 mb-3">
+        <div>
+          <span class="small fw-bold text-uppercase text-ww-purple" style="font-size:0.7rem;">Interactive Assessment</span>
+          <h3 id="quizModalTitle" class="font-serif-brand h5 fw-bold mb-0">WedWise Compatibility Check</h3>
+        </div>
+        <button type="button" id="closeQuizModalBtn" class="btn-ww-soft rounded-circle p-0" style="width:38px;height:38px;" aria-label="Close modal">✕</button>
+      </div>
+
+      <!-- STEP 1: Questions View -->
+      <div id="quizQuestionsStep">
+        <p class="small text-secondary mb-3">
+          Answer these 5 foundational questions. To keep your reflections private and actionable, we will send your personalized <strong>Couple Alignment Report &amp; Discussion Guide</strong> directly to your WhatsApp or Email.
+        </p>
+        <div id="quizQuestionsContainer" class="d-flex flex-column gap-3 mb-3 small"></div>
+        <div class="d-flex flex-wrap gap-2">
+          <button type="button" id="calculateQuizBtn" class="btn-ww-primary flex-grow-1 small">Generate Alignment Insight</button>
+          <button type="button" id="quizBookWhatsappBtn" class="btn-ww-outline small">Discuss with Expert →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Engagement & Report Delivery Gate (WhatsApp / Email / Optional Google Login) -->
+      <div id="quizResultBox" class="d-none">
+        <div class="p-3 rounded-4 bg-ww-blush border border-ww-gold mb-3">
+          <div class="d-flex align-items-center justify-content-between mb-1">
+            <span class="badge rounded-pill bg-ww-purple">✓ 5/5 Responses Analyzed</span>
+            <button type="button" id="retakeQuizBtn" class="btn btn-link p-0 small text-ww-purple text-decoration-none">← Edit Answers</button>
+          </div>
+          <div id="quizResultTitle" class="font-serif-brand h5 fw-bold text-ww-purple mt-2 mb-1">
+            Your Couple Alignment Report is Ready!
+          </div>
+          <p id="quizResultText" class="small text-secondary mb-2">
+            Enter your details below to receive your full category breakdown and priority discussion guide on WhatsApp or Email:
+          </p>
+
+          <!-- Blurred Preview (Unlocks once sent to WhatsApp or Email) -->
+          <div id="quizBlurredBreakdown" class="ww-report-blur p-3 rounded-3 bg-ww-ivory border border-ww-gold small mb-3">
+            <div class="d-flex justify-content-between fw-bold mb-1">
+              <span>Overall Readiness Index:</span>
+              <span id="quizScoreNumber" class="text-ww-purple">80%</span>
+            </div>
+            <div class="text-secondary" id="quizPriorityAreaText">
+              Priority Discussion Topic: Family Expectations &amp; Healthy Boundaries
+            </div>
+          </div>
+
+          <!-- Lead Capture Inputs -->
+          <div class="row g-2 mb-3">
+            <div class="col-12 col-sm-6">
+              <label for="leadNameInput" class="form-label small fw-semibold mb-1">Your Name</label>
+              <input type="text" id="leadNameInput" placeholder="e.g., Aarav / Sneha" class="form-control form-control-sm bg-white border-ww-gold" />
+            </div>
+            <div class="col-12 col-sm-6">
+              <label for="leadContactInput" class="form-label small fw-semibold mb-1">Your Email or WhatsApp No.</label>
+              <input type="text" id="leadContactInput" placeholder="name@email.com or +91..." class="form-control form-control-sm bg-white border-ww-gold" />
+            </div>
+          </div>
+
+          <div class="d-flex flex-column gap-2">
+            <button type="button" id="sendReportWhatsappBtn" class="btn-ww-whatsapp w-100 small">
+              <span>📲 Send My Full Report on WhatsApp (Instant)</span>
+            </button>
+            <div class="d-flex flex-column flex-sm-row gap-2">
+              <button type="button" id="sendReportEmailBtn" class="btn-ww-outline flex-grow-1 small py-2">
+                ✉️ Send Report via Email
+              </button>
+              <button type="button" id="googleSignInReportBtn" class="btn-ww-soft flex-grow-1 small py-2">
+                🔐 Continue with Google
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Partner Code Modal -->
+  <div id="partnerModal" class="ww-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="partnerModalTitle">
+    <div class="ww-modal-dialog" style="max-width:440px;">
+      <div class="d-flex align-items-center justify-content-between border-bottom border-ww-gold pb-3 mb-3">
+        <div>
+          <span class="small fw-bold text-uppercase text-ww-purple" style="font-size:0.7rem;">Privacy-First Connection</span>
+          <h3 id="partnerModalTitle" class="font-serif-brand h5 fw-bold mb-0">Connect Partner via Code</h3>
+        </div>
+        <button type="button" id="closePartnerModalBtn" class="btn-ww-soft rounded-circle p-0" style="width:38px;height:38px;" aria-label="Close modal">✕</button>
+      </div>
+
+      <p class="small text-secondary mb-3">
+        Generate a single-use 48-hour invitation code to share with your partner on WhatsApp. Your assessment answers remain private until both of you choose to share.
+      </p>
+
+      <div class="p-3 rounded-3 bg-ww-blush border d-flex align-items-center justify-content-between mb-3">
+        <div>
+          <div class="small text-uppercase fw-bold text-ww-purple" style="font-size:0.68rem;">Your Invitation Code</div>
+          <div id="generatedPartnerCode" class="font-monospace fs-5 fw-bold">WW-8492-IN</div>
+        </div>
+        <div class="d-flex gap-2">
+          <button type="button" id="regenPartnerCodeBtn" class="btn-ww-soft py-1 px-3 small">New</button>
+          <button type="button" id="copyPartnerCodeBtn" class="btn-ww-primary py-1 px-3 small">Copy</button>
+        </div>
+      </div>
+
+      <button type="button" id="shareCodeOnWhatsappBtn" class="btn-ww-whatsapp w-100 small">
+        Send Invitation Code on WhatsApp ↗
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Banner -->
+  <div id="toastBanner" class="position-fixed bottom-0 end-0 m-3 p-3 rounded-3 text-white small fw-semibold shadow d-none align-items-center gap-2" style="z-index:1080;background:#343039;border:1px solid #E6A04A;">
+    <span style="color:#E6A04A;">✓</span>
+    <span id="toastMessage">Copied to clipboard!</span>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
